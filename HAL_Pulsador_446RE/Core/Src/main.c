@@ -49,6 +49,7 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+void polling_button(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -56,7 +57,8 @@ static void MX_GPIO_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 bool secuencia = false;
-
+uint8_t sec1[3]={GPIO_PIN_5,GPIO_PIN_6,GPIO_PIN_7};
+uint8_t sec2[3]={GPIO_PIN_5,GPIO_PIN_7,GPIO_PIN_6};
 /* USER CODE END 0 */
 
 /**
@@ -99,43 +101,38 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  //PC13 TIENE UN PULL UP POR HARDWARE, hacerlo por interrupciones mejor :v
-	  if ( !(GPIOC->IDR & (1 << 13)))
-	  {
-		  secuencia = !secuencia;
-
-	  }
-
+	  polling_button(); //Cambia estado de la variable secuencia
 
 	  if(secuencia == false)
 	  {
-		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
-		  HAL_Delay(200);
-		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
-		  HAL_Delay(200);
-		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_SET);
-		  HAL_Delay(200);
-		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_RESET);
-		  HAL_Delay(200);
-		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_SET);
-		  HAL_Delay(200);
-		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_RESET);
-		  HAL_Delay(200);
+		  for(uint8_t i= 0; i < 3; i++)
+		  {
+			  polling_button();
+			  HAL_GPIO_WritePin(GPIOA, sec1[i], GPIO_PIN_SET);
+			  polling_button();
+			  HAL_Delay(200);
+			  polling_button();
+			  HAL_GPIO_WritePin(GPIOA, sec1[i], GPIO_PIN_RESET);
+			  polling_button();
+			  HAL_Delay(200);
+			  polling_button();
+		  }
+
 	  }
 	  else if(secuencia == true)
 	  {
-		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
-		  HAL_Delay(200);
-		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
-		  HAL_Delay(200);
-		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_SET);
-		  HAL_Delay(200);
-		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_RESET);
-		  HAL_Delay(200);
-		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_SET);
-		  HAL_Delay(200);
-		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_RESET);
-		  HAL_Delay(200);
+		  for(uint8_t i= 0; i < 3; i++)
+		  {
+			  polling_button();
+			  HAL_GPIO_WritePin(GPIOA, sec2[i], GPIO_PIN_SET);
+			  polling_button();
+			  HAL_Delay(200);
+			  polling_button();
+			  HAL_GPIO_WritePin(GPIOA, sec2[i], GPIO_PIN_RESET);
+			  polling_button();
+			  HAL_Delay(200);
+			  polling_button();
+		  }
 
 
 	  }
@@ -221,6 +218,15 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+void polling_button(void)
+{
+	//PC13 TIENE UN PULL UP POR HARDWARE, hacerlo por interrupciones mejor :v
+	if ( !(GPIOC->IDR & (1 << 13)))
+	{
+		secuencia = !secuencia;
+
+	 }
+}
 
 /* USER CODE END 4 */
 
