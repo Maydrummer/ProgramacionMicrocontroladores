@@ -11,6 +11,9 @@
 *.ilk
 *.map
 *.exp
+*.launch
+*.ioc
+*.mxproject
 
 # Precompiled Headers
 *.gch
