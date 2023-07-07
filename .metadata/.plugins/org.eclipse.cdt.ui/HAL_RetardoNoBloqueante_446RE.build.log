@@ -1,0 +1,10 @@
+19:36:13 **** Incremental Build of configuration Debug for project HAL_RetardoNoBloqueante_446RE ****
+make -j12 all 
+arm-none-eabi-size   HAL_RetardoNoBloqueante_446RE.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6632	     20	   1612	   8264	   2048	HAL_RetardoNoBloqueante_446RE.elf
+Finished building: default.size.stdout
+ 
+
+19:36:14 Build Finished. 0 errors, 0 warnings. (took 673ms)
+

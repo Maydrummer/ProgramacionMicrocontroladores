@@ -1,0 +1,10 @@
+19:42:58 **** Incremental Build of configuration Debug for project HAL_BlinkLed_446RE ****
+make -j12 all 
+arm-none-eabi-size   HAL_BlinkLed_446RE.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6404	     20	   1572	   7996	   1f3c	HAL_BlinkLed_446RE.elf
+Finished building: default.size.stdout
+ 
+
+19:42:58 Build Finished. 0 errors, 0 warnings. (took 622ms)
+

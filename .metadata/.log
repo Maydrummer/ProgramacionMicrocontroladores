@@ -1,0 +1,589 @@
+!SESSION 2023-06-29 17:07:13.414 -----------------------------------------------
+eclipse.buildId=Version 1.12.1
+java.version=11.0.17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_EC
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-06-29 17:08:01.956
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-06-29 17:08:01.957
+!MESSAGE Log4j2 initialized with config file /home/anthony/Documentos/1_Bimestre/ProgramaciondeMicrocontroladores/ProgramacionMicrocontroladores/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-06-29 17:08:05.061
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-06-29 17:14:31.178
+!MESSAGE Indexed 'BlinkLed_446RE' (21 sources, 108 headers) in 3,77 sec: 9.024 declarations; 36.757 references; 2 unresolved inclusions; 42 syntax errors; 147 unresolved names (0,32 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-06-29 17:14:33.905
+!MESSAGE Indexed 'HAL_BlinkLed_446RE' (21 sources, 108 headers) in 2,71 sec: 9.025 declarations; 36.805 references; 2 unresolved inclusions; 42 syntax errors; 147 unresolved names (0,32 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-06-29 17:14:52.843
+!MESSAGE Indexed 'HAL_Pulsador_446RE' (21 sources, 109 headers) in 2,25 sec: 9.027 declarations; 36.930 references; 2 unresolved inclusions; 42 syntax errors; 147 unresolved names (0,32 %)
+
+!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 4 0 2023-06-29 17:15:09.762
+!MESSAGE Stackanalyzer failed to analyze input
+!STACK 0
+java.lang.NullPointerException
+	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:952)
+	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$15(StackAnalyzerView.java:1307)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+!SESSION 2023-07-06 00:24:51.442 -----------------------------------------------
+eclipse.buildId=Version 1.12.1
+java.version=11.0.17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_EC
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-07-06 00:24:59.043
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-07-06 00:24:59.044
+!MESSAGE Log4j2 initialized with config file /home/anthony/Documentos/1_Bimestre/ProgramaciondeMicrocontroladores/ProgramacionMicrocontroladores/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-07-06 00:25:02.656
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2023-07-06 00:28:43.774
+!MESSAGE Connection to https://download.eclipse.org/releases/2022-03/202203161000/content.xml.xz failed on Remote host terminated the handshake. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake
+	at java.base/sun.security.ssl.SSLSocketImpl.handleEOF(SSLSocketImpl.java:1696)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1514)
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1416)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:456)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:427)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:273)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:241)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1009)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1001)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:997)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:472)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:160)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1506)
+	... 30 more
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2023-07-06 00:31:26.173
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at https://download.eclipse.org/releases/2022-03/202203161000/content.xml.xz.
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.updateCache(CacheManager.java:459)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCacheFromFile(CacheManager.java:138)
+	at org.eclipse.equinox.internal.p2.metadata.repository.XZedSimpleMetadataRepositoryFactory.getLocalFile(XZedSimpleMetadataRepositoryFactory.java:60)
+	at org.eclipse.equinox.internal.p2.metadata.repository.XZedSimpleMetadataRepositoryFactory.load(XZedSimpleMetadataRepositoryFactory.java:80)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:685)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:171)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:113)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:685)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+	at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readFully(SSLSocketInputRecord.java:461)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decodeInputRecord(SSLSocketInputRecord.java:243)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:181)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1509)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1476)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1065)
+	at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.hc.core5.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:173)
+	at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:135)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:133)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer$1.performFileTransfer(AbstractRetrieveFileTransfer.java:180)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2023-07-06 00:31:26.175
+!MESSAGE Unable to read repository at https://download.eclipse.org/releases/2022-03/202203161000/content.xml.xz.
+!STACK 0
+java.net.SocketTimeoutException: Read timed out
+	at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+	at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readFully(SSLSocketInputRecord.java:461)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decodeInputRecord(SSLSocketInputRecord.java:243)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:181)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1509)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1476)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1065)
+	at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.hc.core5.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:173)
+	at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:135)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:133)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer$1.performFileTransfer(AbstractRetrieveFileTransfer.java:180)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1002 2023-07-06 00:31:26.177
+!MESSAGE Unable to read repository at https://download.eclipse.org/releases/2022-03.
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at https://download.eclipse.org/releases/2022-03/202203161000/content.xml.xz.
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.updateCache(CacheManager.java:459)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCacheFromFile(CacheManager.java:138)
+	at org.eclipse.equinox.internal.p2.metadata.repository.XZedSimpleMetadataRepositoryFactory.getLocalFile(XZedSimpleMetadataRepositoryFactory.java:60)
+	at org.eclipse.equinox.internal.p2.metadata.repository.XZedSimpleMetadataRepositoryFactory.load(XZedSimpleMetadataRepositoryFactory.java:80)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:685)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:171)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:113)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:685)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+	at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readFully(SSLSocketInputRecord.java:461)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decodeInputRecord(SSLSocketInputRecord.java:243)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:181)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1509)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1476)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1065)
+	at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.hc.core5.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:173)
+	at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:135)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:133)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer$1.performFileTransfer(AbstractRetrieveFileTransfer.java:180)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2023-07-06 00:31:26.177
+!MESSAGE Unable to read repository at https://download.eclipse.org/releases/2022-03/202203161000/content.xml.xz.
+!STACK 0
+java.net.SocketTimeoutException: Read timed out
+	at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+	at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readFully(SSLSocketInputRecord.java:461)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decodeInputRecord(SSLSocketInputRecord.java:243)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:181)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1509)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1476)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1065)
+	at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.hc.core5.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:173)
+	at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:135)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:133)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer$1.performFileTransfer(AbstractRetrieveFileTransfer.java:180)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-07-06 01:18:36.422
+!MESSAGE Indexed 'HAL_RetardoNoBloqueante_446RE' (21 sources, 109 headers) in 3,41 sec: 9.035 declarations; 36.881 references; 2 unresolved inclusions; 42 syntax errors; 147 unresolved names (0,32 %)
+!SESSION 2023-07-06 17:27:59.930 -----------------------------------------------
+eclipse.buildId=Version 1.12.1
+java.version=11.0.17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_EC
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-07-06 17:28:17.892
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-07-06 17:28:17.893
+!MESSAGE Log4j2 initialized with config file /home/anthony/Documentos/1_Bimestre/ProgramaciondeMicrocontroladores/ProgramacionMicrocontroladores/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-07-06 17:28:21.669
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2023-07-06 17:28:41.514
+!MESSAGE Connection to https://sw-center.st.com/stm32cubeide/openstlinux/updatesite1/p2.index failed on sw-center.st.com: Fallo temporal en la resolución del nombre. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: sw-center.st.com: Fallo temporal en la resolución del nombre
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1529)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1519)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1378)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1306)
+	at org.apache.hc.client5.http.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:43)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:118)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1009)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1001)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:997)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2023-07-06 17:28:41.764
+!MESSAGE Unknown Host: https://sw-center.st.com/stm32cubeide/openstlinux/updatesite1/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: sw-center.st.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1519)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1378)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1306)
+	at org.apache.hc.client5.http.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:43)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:118)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:251)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:71)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2023-07-06 17:28:41.766
+!MESSAGE Connection to https://download.eclipse.org/tools/cdt/releases/latest/p2.index failed on download.eclipse.org: Fallo temporal en la resolución del nombre. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org: Fallo temporal en la resolución del nombre
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1529)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1519)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1378)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1306)
+	at org.apache.hc.client5.http.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:43)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:118)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1009)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1001)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:997)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2023-07-06 17:28:41.977
+!MESSAGE Unknown Host: https://download.eclipse.org/tools/cdt/releases/latest/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1519)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1378)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1306)
+	at org.apache.hc.client5.http.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:43)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:118)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:251)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:71)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2023-07-06 17:28:41.981
+!MESSAGE Connection to https://download.eclipse.org/releases/2022-03/p2.index failed on download.eclipse.org. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1519)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1378)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1306)
+	at org.apache.hc.client5.http.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:43)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:118)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1009)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1001)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:997)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2023-07-06 17:28:42.193
+!MESSAGE Unknown Host: https://download.eclipse.org/releases/2022-03/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1519)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1378)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1306)
+	at org.apache.hc.client5.http.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:43)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:118)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:251)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:71)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2023-07-06 17:28:42.195
+!MESSAGE Connection to https://sw-center.st.com/stm32cubeide/updatesite1/p2.index failed on sw-center.st.com. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: sw-center.st.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1519)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1378)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1306)
+	at org.apache.hc.client5.http.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:43)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:118)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1009)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1001)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:997)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2023-07-06 17:28:42.405
+!MESSAGE Unknown Host: https://sw-center.st.com/stm32cubeide/updatesite1/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: sw-center.st.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1519)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1378)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1306)
+	at org.apache.hc.client5.http.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:43)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:118)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:251)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:71)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2023-07-06 18:54:27.797 -----------------------------------------------
+eclipse.buildId=Version 1.12.1
+java.version=11.0.17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_EC
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-07-06 18:54:33.493
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-07-06 18:54:33.494
+!MESSAGE Log4j2 initialized with config file /home/anthony/Documentos/1_Bimestre/ProgramaciondeMicrocontroladores/ProgramacionMicrocontroladores/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-07-06 18:54:38.062
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-07-06 19:13:09.511
+!MESSAGE Indexed 'Practica3' (21 sources, 109 headers) in 2,16 sec: 9.059 declarations; 36.917 references; 2 unresolved inclusions; 42 syntax errors; 147 unresolved names (0,32 %)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2023-07-06 19:43:53.356
+!MESSAGE Won't launch debug session since we failed to locate the binary.
+
+!ENTRY org.eclipse.ui.navigator.resources 4 2 2023-07-06 19:48:02.292
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.navigator.resources".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.actions.CloseResourceAction.run(CloseResourceAction.java:202)
+	at org.eclipse.ui.navigator.resources.ProjectExplorer$1.handleMiddleClick(ProjectExplorer.java:398)
+	at org.eclipse.ui.navigator.resources.ProjectExplorer$1.lambda$0(ProjectExplorer.java:383)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.navigator.resources.ProjectExplorer$1.mouseUp(ProjectExplorer.java:382)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:224)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5895)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1520)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5126)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4581)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-07-06 19:50:46.414
+!MESSAGE Indexed 'Practica2' (21 sources, 109 headers) in 1,45 sec: 9.059 declarations; 36.917 references; 2 unresolved inclusions; 42 syntax errors; 147 unresolved names (0,32 %)

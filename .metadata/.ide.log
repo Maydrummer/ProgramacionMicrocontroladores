@@ -1,0 +1,102 @@
+2023-07-06 00:24:59,232 [INFO] Activator:176 - 
+
+
+2023-07-06 00:24:59,237 [INFO] Activator:177 - !SESSION log4j initialized
+2023-07-06 00:25:01,916 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2023-07-06 00:25:22,940 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2023-07-06 00:25:22,941 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2023-07-06 00:25:22,942 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2023-07-06 02:12:53,032 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 02:12:53,033 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 02:12:53,033 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 02:33:06,027 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 02:33:06,028 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 02:33:06,030 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 02:33:12,039 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 02:33:12,039 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 02:33:12,039 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 17:28:18,037 [INFO] Activator:176 - 
+
+
+2023-07-06 17:28:18,038 [INFO] Activator:177 - !SESSION log4j initialized
+2023-07-06 17:28:20,621 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2023-07-06 17:28:21,034 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 17:28:21,035 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 17:28:21,035 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 17:28:41,438 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2023-07-06 17:28:41,438 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2023-07-06 17:28:41,439 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2023-07-06 17:29:10,360 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 17:29:10,361 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 17:29:10,361 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 17:39:43,659 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 17:39:43,660 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 17:39:43,660 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 17:40:21,012 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 17:40:21,013 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 17:40:21,013 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 17:48:37,676 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 17:48:37,677 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 17:48:37,678 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 17:58:09,253 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 17:58:09,254 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 17:58:09,254 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 18:54:33,654 [INFO] Activator:176 - 
+
+
+2023-07-06 18:54:33,655 [INFO] Activator:177 - !SESSION log4j initialized
+2023-07-06 18:54:37,547 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2023-07-06 18:54:58,260 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2023-07-06 18:54:58,261 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2023-07-06 18:54:58,261 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2023-07-06 19:37:56,827 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-07-06 19:37:58,831 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-07-06 19:38:00,835 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-07-06 19:44:17,747 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 19:44:17,749 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 19:44:17,750 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 19:44:17,758 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 19:44:17,758 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 19:44:17,758 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 19:44:53,098 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-07-06 19:44:55,264 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2023-07-06 19:44:57,268 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-07-06 19:44:59,278 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-07-06 19:45:01,282 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-07-06 19:45:03,285 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-07-06 19:45:09,039 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-07-06 19:45:11,043 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-07-06 19:45:13,046 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-07-06 19:45:15,061 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-07-06 19:45:17,065 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-07-06 19:45:19,069 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-07-06 19:46:16,836 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 19:46:16,838 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 19:46:16,839 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 19:46:16,846 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 19:46:16,847 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 19:46:16,847 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 19:46:35,655 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-07-06 19:46:37,659 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-07-06 19:46:39,663 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-07-06 19:46:41,701 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-07-06 19:46:43,705 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-07-06 19:46:45,709 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-07-06 19:47:26,482 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 19:47:26,484 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 19:47:26,485 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 19:47:26,491 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 19:47:26,491 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 19:47:26,491 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 19:51:40,850 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 19:51:40,852 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 19:51:40,853 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-07-06 19:52:09,132 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-07-06 19:52:11,135 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-07-06 19:52:13,138 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-07-06 19:52:35,182 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-07-06 19:52:37,185 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-07-06 19:52:39,535 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2023-07-06 19:52:41,566 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-07-06 19:52:43,570 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out
+2023-07-06 19:52:45,573 [ERROR] ConfigurationRetriever:142 - IOException on connection: connect timed out

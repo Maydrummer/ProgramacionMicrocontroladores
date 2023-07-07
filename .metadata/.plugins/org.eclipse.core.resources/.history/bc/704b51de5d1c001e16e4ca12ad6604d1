@@ -1,0 +1,32 @@
+/*
+ * API_delay.h
+ *
+ *  Created on: 6 jul. 2023
+ *      Author: anthony
+ */
+
+#ifndef API_INC_API_DELAY_H_
+#define API_INC_API_DELAY_H_
+
+#include <stdint.h>
+#include <stdbool.h>
+#include "stm32f4xx_hal.c"
+#define NULL ((void *)0)
+#define tiempo1 100
+#define tiempo2 500
+#define tiempo3 1000
+
+typedef uint32_t tick_t; //Se debe incluir la biblioteca stdint.h
+typedef bool bool_t; //Se debe incluir la biblioteca stdbool.h
+typedef struct{
+	tick_t startTime; //variable que almacenara el tiempo de inicio
+	tick_t duration; //variable que almacenara la duració
+	bool_t running;  //Variable que almacenara la bandera de si termino el tiempo de espera seteado
+}delay_t;
+
+
+void delayInit(delay_t *delay, tick_t duration); //Funcion para cargar el la duracion del retardo
+bool_t delayRead(delay_t *delay); //Funcion que verifica el estado del flag running
+void delayWrite(delay_t *delay,tick_t duration); //FUncion que  cambia el tiempo de duracion de un delay existente
+void Error_t(void);
+#endif /* API_INC_API_DELAY_H_ */

@@ -1,0 +1,7 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:HAL_BlinkLed_446RE Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:HAL_Pulsador_446RE,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:HAL_RetardoNoBloqueante_446RE,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Practica3
+eclipse.preferences.version=1
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:HAL_BlinkLed_446RE\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:HAL_BlinkLed_446RE\ Debug/activeLaunchTarget=null\:---
