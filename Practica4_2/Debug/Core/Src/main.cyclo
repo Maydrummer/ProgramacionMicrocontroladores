@@ -1,0 +1,7 @@
+../Core/Src/main.c:71:5:main	3
+../Core/Src/main.c:134:6:presionado	2
+../Core/Src/main.c:147:6:liberado	1
+../Core/Src/main.c:153:6:estadoinicialleds	1
+../Core/Src/main.c:158:6:SystemClock_Config	3
+../Core/Src/main.c:200:13:MX_GPIO_Init	1
+../Core/Src/main.c:238:6:Error_Handler	1
