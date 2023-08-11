@@ -20,6 +20,7 @@
 #include "main.h"
 #include <stdio.h>
 #include "driver_sensor.h"
+#include "driver_keypad.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -50,7 +51,6 @@ UART_HandleTypeDef huart2;
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
-static void MX_GPIO_Init(void);
 static void MX_USART2_UART_Init(void);
 /* USER CODE BEGIN PFP */
 
@@ -89,8 +89,8 @@ int main(void)
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
-  MX_GPIO_Init();
   MX_USART2_UART_Init();
+  keypad_init();
 
   /* USER CODE BEGIN 2 */
   HAL_UART_Transmit(&huart2, dataT, 12, HAL_MAX_DELAY);
@@ -101,13 +101,11 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  if(init_sensor())
-	  {
-		  get_frame();
-		  ptro=return_distance();
-		  HAL_UART_Transmit(&huart2, ptro, sizeof(ptro), HAL_MAX_DELAY);
-		  HAL_UART_Transmit(&huart2,(const uint8_t *) "\r\n", 2 , HAL_MAX_DELAY);
-	  }
+	  uint8_t caracter=keypad_read();
+	  uint8_t *ptro=&caracter;
+	  HAL_UART_Transmit(&huart2,ptro , 1, HAL_MAX_DELAY);
+
+
 
 
     /* USER CODE BEGIN 3 */
@@ -202,46 +200,6 @@ static void MX_USART2_UART_Init(void)
 
 }
 
-/**
-  * @brief GPIO Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_GPIO_Init(void)
-{
-  GPIO_InitTypeDef GPIO_InitStruct = {0};
-/* USER CODE BEGIN MX_GPIO_Init_1 */
-/* USER CODE END MX_GPIO_Init_1 */
-
-  /* GPIO Ports Clock Enable */
-  __HAL_RCC_GPIOC_CLK_ENABLE();
-  __HAL_RCC_GPIOH_CLK_ENABLE();
-  __HAL_RCC_GPIOA_CLK_ENABLE();
-  __HAL_RCC_GPIOB_CLK_ENABLE();
-
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
-
-  /*Configure GPIO pin : B1_Pin */
-  GPIO_InitStruct.Pin = B1_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(B1_GPIO_Port, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : LD2_Pin */
-  GPIO_InitStruct.Pin = LD2_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(LD2_GPIO_Port, &GPIO_InitStruct);
-
-/* USER CODE BEGIN MX_GPIO_Init_2 */
-/* USER CODE END MX_GPIO_Init_2 */
-}
-
-/* USER CODE BEGIN 4 */
-
-/* USER CODE END 4 */
 
 /**
   * @brief  This function is executed in case of error occurrence.
