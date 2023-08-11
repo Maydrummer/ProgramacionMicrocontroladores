@@ -1,0 +1,5 @@
+../Drivers/API/Src/driver_sensor.c:23:8:init_sensor	2
+../Drivers/API/Src/driver_sensor.c:44:7:get_frame	5
+../Drivers/API/Src/driver_sensor.c:67:6:get_distance	1
+../Drivers/API/Src/driver_sensor.c:79:6:get_distance_error	2
+../Drivers/API/Src/driver_sensor.c:89:10:return_distance	1
