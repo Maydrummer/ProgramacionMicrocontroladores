@@ -39,13 +39,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_macro  0002127e  00000000  00000000  0002c181  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   0000b30e  00000000  00000000  0004d3ff  2**0
+ 18 .debug_line   0000b310  00000000  00000000  0004d3ff  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    000c8155  00000000  00000000  0005870d  2**0
+ 19 .debug_str    000c8156  00000000  00000000  0005870f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_frame  00001e48  00000000  00000000  00120864  2**2
+ 20 .debug_frame  00001e48  00000000  00000000  00120868  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 000000a2  00000000  00000000  001226ac  2**0
+ 21 .debug_line_str 000000a2  00000000  00000000  001226b0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -375,17 +375,15 @@ int main(void)
   /* Configure the system clock */
   SystemClock_Config();
  800050a:	f000 f81d 	bl	8000548 <SystemClock_Config>
-  /* USER CODE BEGIN SysInit */
-
-  /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
+
+
+  /* USER CODE BEGIN 2 */
   MX_USART2_UART_Init();
  800050e:	f000 f889 	bl	8000624 <MX_USART2_UART_Init>
   keypad_init();
  8000512:	f000 f9d3 	bl	80008bc <keypad_init>
-
-  /* USER CODE BEGIN 2 */
   HAL_UART_Transmit(&huart2, dataT, 12, HAL_MAX_DELAY);
  8000516:	f04f 33ff 	mov.w	r3, #4294967295
  800051a:	220c      	movs	r2, #12
@@ -1237,7 +1235,7 @@ void keypad_init(void)
 	//Configuracion como salida de los pines correspondientes a las filas
 	//FI-Pb4,F2-PB5,F3_PB6,F4_PB7 OUTPUT
 	GPIO_InitStruct.Pin = F1_Pin|F2_Pin|F3_Pin|F4_Pin;
- 8000926:	f44f 73b8 	mov.w	r3, #368	; 0x170
+ 8000926:	f44f 638e 	mov.w	r3, #1136	; 0x470
  800092a:	60fb      	str	r3, [r7, #12]
 	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
  800092c:	2301      	movs	r3, #1
@@ -1681,7 +1679,7 @@ void F4_OFF(void){
  8000c1e:	af00      	add	r7, sp, #0
 	HAL_GPIO_WritePin(PORT_F,F4_Pin , GPIO_PIN_RESET);
  8000c20:	2200      	movs	r2, #0
- 8000c22:	f44f 7180 	mov.w	r1, #256	; 0x100
+ 8000c22:	f44f 6180 	mov.w	r1, #1024	; 0x400
  8000c26:	4802      	ldr	r0, [pc, #8]	; (8000c30 <F4_OFF+0x14>)
  8000c28:	f000 fc1a 	bl	8001460 <HAL_GPIO_WritePin>
 }
@@ -1744,7 +1742,7 @@ void F4_ON(void){
  8000c7e:	af00      	add	r7, sp, #0
 	HAL_GPIO_WritePin(PORT_F,F4_Pin , GPIO_PIN_SET);
  8000c80:	2201      	movs	r2, #1
- 8000c82:	f44f 7180 	mov.w	r1, #256	; 0x100
+ 8000c82:	f44f 6180 	mov.w	r1, #1024	; 0x400
  8000c86:	4802      	ldr	r0, [pc, #8]	; (8000c90 <F4_ON+0x14>)
  8000c88:	f000 fbea 	bl	8001460 <HAL_GPIO_WritePin>
 }

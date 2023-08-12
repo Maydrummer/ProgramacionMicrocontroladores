@@ -14,7 +14,7 @@
 	F1_PIN		//	PB4
 	F2_PIN		//	PB5
 	F3_PIN		//	PB6
-	F4_PIN		//	PB8
+	F4_PIN		//	PB10
 	C1_PIN		//	PA6
 	C2_PIN		//	PA7
 	C3_PIN		//	PA8
@@ -24,7 +24,7 @@
 #define F1_Pin GPIO_PIN_4
 #define F2_Pin GPIO_PIN_5
 #define F3_Pin GPIO_PIN_6
-#define F4_Pin GPIO_PIN_8
+#define F4_Pin GPIO_PIN_10
 #define C1_Pin GPIO_PIN_6
 #define C2_Pin GPIO_PIN_7
 #define C3_Pin GPIO_PIN_8

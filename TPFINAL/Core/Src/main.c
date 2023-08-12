@@ -18,13 +18,12 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include <stdio.h>
-#include "driver_sensor.h"
-#include "driver_keypad.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <stdio.h>
+#include "driver_sensor.h"
+#include "driver_keypad.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -43,17 +42,17 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-UART_HandleTypeDef huart2;
+
 
 /* USER CODE BEGIN PV */
-
+UART_HandleTypeDef huart2;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
+
+/* USER CODE BEGIN PFP */
 void SystemClock_Config(void);
 static void MX_USART2_UART_Init(void);
-/* USER CODE BEGIN PFP */
-
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -89,10 +88,11 @@ int main(void)
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
-  MX_USART2_UART_Init();
-  keypad_init();
+
 
   /* USER CODE BEGIN 2 */
+  MX_USART2_UART_Init();
+  keypad_init();
   HAL_UART_Transmit(&huart2, dataT, 12, HAL_MAX_DELAY);
   /* USER CODE END 2 */
 
