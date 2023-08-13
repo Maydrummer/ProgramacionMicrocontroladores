@@ -13,6 +13,6 @@
 void enviar_stringCompleto_uart(uint8_t *pstring,UART_HandleTypeDef huart); //Envia por la uart string completo
 void enviar_stringcortado_uart(uint8_t *pstring, UART_HandleTypeDef huart,uint16_t size); //Envia x cantidad de caracter de un string, x=size
 void recibir_uart(UART_HandleTypeDef huart,uint8_t *pData,uint16_t size, uint32_t tiempo); //Recibe datos por la uart y los almacena en el buffer pData
-
-
+void clean_rx_buffer(UART_HandleTypeDef huart);
+void clean_tx_buffer(UART_HandleTypeDef huart);
 #endif /* API_INC_DRIVER_UART_H_ */

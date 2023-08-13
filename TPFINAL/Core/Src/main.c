@@ -21,9 +21,10 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include <stdio.h>
 #include "driver_sensor.h"
 #include "driver_keypad.h"
+#include "driver_i2c1.h"
+#include "driver_terminal.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -43,22 +44,17 @@
 
 /* Private variables ---------------------------------------------------------*/
 
-
 /* USER CODE BEGIN PV */
-UART_HandleTypeDef huart2;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
-
-/* USER CODE BEGIN PFP */
 void SystemClock_Config(void);
-static void MX_USART2_UART_Init(void);
+/* USER CODE BEGIN PFP */
+
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-uint8_t dataT[12]="Hola mundo\n\r";
-uint8_t *ptro;
 /* USER CODE END 0 */
 
 /**
@@ -88,12 +84,11 @@ int main(void)
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
-
-
   /* USER CODE BEGIN 2 */
-  MX_USART2_UART_Init();
+
   keypad_init();
-  HAL_UART_Transmit(&huart2, dataT, 12, HAL_MAX_DELAY);
+  while(!(init_terminal()));
+  while(!(i2c_init()));
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -101,10 +96,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  uint8_t caracter=keypad_read();
-	  uint8_t *ptro=&caracter;
-	  HAL_UART_Transmit(&huart2,ptro , 1, HAL_MAX_DELAY);
-
+	  scan_address();
 
 
 
@@ -162,44 +154,39 @@ void SystemClock_Config(void)
 }
 
 /**
+  * @brief I2C1 Initialization Function
+  * @param None
+  * @retval None
+  */
+
+/**
   * @brief UART4 Initialization Function
   * @param None
   * @retval None
   */
+
+  /* USER CODE BEGIN UART4_Init 2 */
+
+  /* USER CODE END UART4_Init 2 */
+
+
 
 /**
   * @brief USART2 Initialization Function
   * @param None
   * @retval None
   */
-static void MX_USART2_UART_Init(void)
-{
 
-  /* USER CODE BEGIN USART2_Init 0 */
 
-  /* USER CODE END USART2_Init 0 */
+/**
+  * @brief GPIO Initialization Function
+  * @param None
+  * @retval None
+  */
 
-  /* USER CODE BEGIN USART2_Init 1 */
+/* USER CODE BEGIN 4 */
 
-  /* USER CODE END USART2_Init 1 */
-  huart2.Instance = USART2;
-  huart2.Init.BaudRate = 115200;
-  huart2.Init.WordLength = UART_WORDLENGTH_8B;
-  huart2.Init.StopBits = UART_STOPBITS_1;
-  huart2.Init.Parity = UART_PARITY_NONE;
-  huart2.Init.Mode = UART_MODE_TX_RX;
-  huart2.Init.HwFlowCtl = UART_HWCONTROL_NONE;
-  huart2.Init.OverSampling = UART_OVERSAMPLING_16;
-  if (HAL_UART_Init(&huart2) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN USART2_Init 2 */
-
-  /* USER CODE END USART2_Init 2 */
-
-}
-
+/* USER CODE END 4 */
 
 /**
   * @brief  This function is executed in case of error occurrence.

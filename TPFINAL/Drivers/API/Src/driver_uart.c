@@ -31,3 +31,14 @@ void recibir_uart(UART_HandleTypeDef huart,uint8_t *pData,uint16_t size,uint32_t
 	//Recibe datos por la uart y los almacena en el buffer pData
 	HAL_UART_Receive(&huart, pData,size, tiempo);
 }
+
+void clean_rx_buffer(UART_HandleTypeDef huart)
+{
+	HAL_UART_AbortReceive(&huart);
+}
+
+void clean_tx_buffer(UART_HandleTypeDef huart)
+{
+	HAL_UART_AbortTransmit(&huart);
+
+}

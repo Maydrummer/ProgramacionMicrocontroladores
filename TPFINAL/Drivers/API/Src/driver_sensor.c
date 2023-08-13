@@ -11,7 +11,7 @@
 #include "driver_sensor.h"
 
 UART_HandleTypeDef huart4;// Se crea estructura para el uart4 donde estara conectado el sensor
-
+extern UART_HandleTypeDef huart2;
 
 
 //Variables privadas
@@ -34,6 +34,7 @@ bool_t init_sensor(void)
 	if (HAL_UART_Init(&huart4) == HAL_OK)
 	{
 		init_status_uart=true;
+		enviar_stringCompleto_uart((uint8_t*)"Sensor inicializado por UART4...", huart2);
 	}
 	return init_status_uart;
 }
@@ -44,7 +45,7 @@ bool_t init_sensor(void)
 void  get_frame(void)
 {
 	bool_t trama_ok;
-	HAL_UART_AbortReceive(&huart4); //Limpiar buffer de recepcion del uart4
+	clean_rx_buffer(huart4); //Limpiar buffer de recepcion del uart4
 	recibir_uart(huart4, rx_buffer, frame_length, HAL_MAX_DELAY); //Recepcion de los 13 bytes
 	trama_ok= true; //Antes de entrar al FOR asignamos true a la variable para que si una de la comparacion falla, recibamos un false
 	for(uint8_t i=0;i<length_cm_ascii ;i++)
@@ -91,15 +92,3 @@ uint8_t* return_distance(void)
 	return asciiformat;
 }
 
-/*
-void ascii_format(uint8_t *buffer_trama)
-{
-	uint8_t asciiformat[longitud_cm_ascii];
-	uint8_t distancia;
-	distancia=buffer_trama[posicion_distancia];
-    asciiformat[0]= (distancia / centenas) + cero_ascii ;  // Dígito de las centenas
-	asciiformat[1]= ((distancia / decenas	) % decenas	) + cero_ascii ;  // Dígito de las decenas
-    asciiformat[2]= (distancia % decenas	) + cero_ascii ; // Dígito de las unidades
-	asciiformat[3]= caracter_nulo;  // caracter nulo
-}
-*/
