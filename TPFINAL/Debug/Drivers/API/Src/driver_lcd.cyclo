@@ -1,0 +1,5 @@
+../Drivers/API/Src/driver_lcd.c:12:6:INIT_LCD	1
+../Drivers/API/Src/driver_lcd.c:21:6:CMD_lcd	1
+../Drivers/API/Src/driver_lcd.c:35:6:CHAR_LCD	1
+../Drivers/API/Src/driver_lcd.c:50:6:STRING_LCD	2
+../Drivers/API/Src/driver_lcd.c:55:6:LCD_XY	3

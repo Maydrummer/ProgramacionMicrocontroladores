@@ -8,6 +8,7 @@
 "./Drivers/API/Src/API_delay.o"
 "./Drivers/API/Src/driver_i2c1.o"
 "./Drivers/API/Src/driver_keypad.o"
+"./Drivers/API/Src/driver_lcd.o"
 "./Drivers/API/Src/driver_sensor.o"
 "./Drivers/API/Src/driver_terminal.o"
 "./Drivers/API/Src/driver_uart.o"

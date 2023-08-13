@@ -25,6 +25,7 @@
 #include "driver_keypad.h"
 #include "driver_i2c1.h"
 #include "driver_terminal.h"
+#include "driver_lcd.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -89,6 +90,11 @@ int main(void)
   keypad_init();
   while(!(init_terminal()));
   while(!(i2c_init()));
+  INIT_LCD();
+  LCD_XY(LCD_LINEA1, POS_4);
+  STRING_LCD((uint8_t *)"A");
+  LCD_XY(LCD_LINEA2, POS_10);
+  STRING_LCD((uint8_t *)":') J");
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -96,7 +102,9 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  scan_address();
+
+
+
 
 
 

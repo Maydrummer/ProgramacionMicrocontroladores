@@ -56,3 +56,12 @@ void scan_address(void)
 		  }
 	  }
 }
+
+void transmit_i2c(I2C_HandleTypeDef hi2c,uint16_t address,uint8_t *pstring)
+{
+	while(*pstring)
+	{
+		HAL_I2C_Master_Transmit(&hi2c,address, (uint8_t *)pstring++, one_byte , timeout_transmit );
+
+	}
+}
