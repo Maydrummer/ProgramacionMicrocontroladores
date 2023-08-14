@@ -16,6 +16,7 @@
 #define     LCD_POSITION0   0x80    //Comando para empezar a definir una posicion 80+ (1 al 32) ya que es LCD 16*2
 #define     LCD_4BITS_MODE  0x28    //Modo 4 bits 2 filas
 #define     LCD_LINEA1	    0x80	//Primera Fila
+#define     LCD_LEFT		0x10	//Cursor a la izquierda
 #define     LCD_LINEA2		0XC0	//Segunda Fila
 #define     LCD_OFF 		0x08	//Apagar el display
 #define     LCD_ON_CMD      0x0C    //Para validar dato transmitido
@@ -52,5 +53,6 @@ void CMD_lcd(uint8_t comando);  			// Envia comando LCD
 void CHAR_LCD(uint8_t caracter);  			// Envia dato LCD
 void STRING_LCD(uint8_t *pstring);  	    // Envia cadena de caracteres
 void LCD_XY(uint8_t x,uint8_t y);           // Posiciona donde escribir
+void CLEAR_LCD();                           // Limpia LCD
 
 #endif /* API_INC_DRIVER_LCD_H_ */

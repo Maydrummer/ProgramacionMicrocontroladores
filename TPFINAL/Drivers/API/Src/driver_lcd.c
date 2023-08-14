@@ -11,10 +11,16 @@ extern I2C_HandleTypeDef hi2c1_t; //Se trae la estructura hi2c1
 
 void INIT_LCD(void)
 {
+	while(!(i2c_init()));
 	CMD_lcd(LCD_HOME);
 	CMD_lcd(LCD_4BITS_MODE);
 	CMD_lcd(LCD_ON_CMD);
 	CMD_lcd(LCD_POSITION0);
+	CMD_lcd(LCD_CLEAR);
+}
+
+void CLEAR_LCD()
+{
 	CMD_lcd(LCD_CLEAR);
 }
 

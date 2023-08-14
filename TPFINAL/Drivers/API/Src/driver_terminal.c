@@ -27,3 +27,7 @@ bool_t init_terminal(void)
 	return state_uart;
 }
 
+void enviar_msg_terminal(uint8_t *msg)
+{
+	enviar_stringCompleto_uart(msg, huart2);
+}

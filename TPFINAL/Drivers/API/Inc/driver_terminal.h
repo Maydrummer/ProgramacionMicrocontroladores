@@ -12,6 +12,7 @@
 
 
 bool_t init_terminal(void);
+void enviar_msg_terminal(uint8_t *pstring);
 
 
 

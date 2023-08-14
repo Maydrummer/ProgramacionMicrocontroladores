@@ -6,6 +6,7 @@
 "./Core/Src/system_stm32f4xx.o"
 "./Core/Startup/startup_stm32f446retx.o"
 "./Drivers/API/Src/API_delay.o"
+"./Drivers/API/Src/FSM_Alarma.o"
 "./Drivers/API/Src/driver_i2c1.o"
 "./Drivers/API/Src/driver_keypad.o"
 "./Drivers/API/Src/driver_lcd.o"

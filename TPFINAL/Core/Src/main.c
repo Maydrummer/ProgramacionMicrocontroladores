@@ -21,11 +21,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "driver_sensor.h"
-#include "driver_keypad.h"
-#include "driver_i2c1.h"
-#include "driver_terminal.h"
-#include "driver_lcd.h"
+#include "FSM_Alarma.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -51,7 +48,7 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-
+extern UART_HandleTypeDef huart2;
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -79,7 +76,8 @@ int main(void)
 
   /* Configure the system clock */
   SystemClock_Config();
-
+  init_perifericos_app();
+  FSM_init();
   /* USER CODE BEGIN SysInit */
 
   /* USER CODE END SysInit */
@@ -87,14 +85,6 @@ int main(void)
   /* Initialize all configured peripherals */
   /* USER CODE BEGIN 2 */
 
-  keypad_init();
-  while(!(init_terminal()));
-  while(!(i2c_init()));
-  INIT_LCD();
-  LCD_XY(LCD_LINEA1, POS_4);
-  STRING_LCD((uint8_t *)"A");
-  LCD_XY(LCD_LINEA2, POS_10);
-  STRING_LCD((uint8_t *)":') J");
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -102,7 +92,11 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+	  FSM_update();
+	  /*
+	  uint8_t caracter=keypad_read();
+	  uint8_t *ptr=&caracter;
+	  HAL_UART_Transmit(&huart2, ptr, 1, 100);*/
 
 
 

@@ -15,6 +15,7 @@ void enviar_stringCompleto_uart(uint8_t *pstring,UART_HandleTypeDef huart)
 	{
 		HAL_UART_Transmit(&huart, (const uint8_t *)pstring++,1, HAL_MAX_DELAY);
 	}
+	HAL_UART_AbortTransmit(&huart);
 }
 
 

@@ -6,6 +6,7 @@
  */
 
 #include "driver_keypad.h"
+#define scan_time 50
 static uint8_t letras[n_filas][n_columnas]={{'1','2','3','A'},
 						                    {'4','5','6','B'},
 						                    {'7','8','9','C'},
@@ -56,7 +57,7 @@ void keypad_init(void)
 uint8_t keypad_read(void)
 {
 	uint8_t i=0;
-	uint8_t caracter=0;
+	uint8_t caracter='\0';
 	for(i=0;i<n_filas;i++)
 	{
 		if(i==0)//Barrido en fila 1
@@ -65,7 +66,8 @@ uint8_t keypad_read(void)
 			F2_ON();
 			F3_ON();
 			F4_ON();
-			HAL_Delay(10);
+			HAL_Delay(scan_time);
+
 			while ( !Read_COL1() ){caracter=letras[0][COL1];}	//caracter 1
 			while ( !Read_COL2() ){caracter=letras[0][COL2];}	//caracter 2
 			while ( !Read_COL3() ){caracter=letras[0][COL3];}	//caracter 3
@@ -77,7 +79,8 @@ uint8_t keypad_read(void)
 			F1_ON();
 			F3_ON();
 			F4_ON();
-			HAL_Delay(10);
+			HAL_Delay(scan_time);
+
 			while ( !Read_COL1() ){caracter=letras[1][COL1];}	//caracter 4
 			while ( !Read_COL2() ){caracter=letras[1][COL2];}	//caracter 5
 			while ( !Read_COL3() ){caracter=letras[1][COL3];}	//caracter 6
@@ -89,7 +92,8 @@ uint8_t keypad_read(void)
 			F1_ON();
 			F2_ON();
 			F4_ON();
-			HAL_Delay(10);
+			HAL_Delay(scan_time);
+
 			while ( !Read_COL1() ){caracter=letras[2][COL1];}	//caracter 7
 			while ( !Read_COL2() ){caracter=letras[2][COL2];}	//caracter 8
 			while ( !Read_COL3() ){caracter=letras[2][COL3];}	//caracter 9
@@ -101,7 +105,8 @@ uint8_t keypad_read(void)
 			F1_ON();
 			F2_ON();
 			F3_ON();
-			HAL_Delay(10);
+			HAL_Delay(scan_time);
+
 			while ( !Read_COL1() ){caracter=letras[3][COL1];}	//caracter *
 			while ( !Read_COL2() ){caracter=letras[3][COL2];}	//caracter 0
 			while ( !Read_COL3() ){caracter=letras[3][COL3];}	//caracter #

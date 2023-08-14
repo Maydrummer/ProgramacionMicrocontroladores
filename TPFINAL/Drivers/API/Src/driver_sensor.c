@@ -34,7 +34,7 @@ bool_t init_sensor(void)
 	if (HAL_UART_Init(&huart4) == HAL_OK)
 	{
 		init_status_uart=true;
-		enviar_stringCompleto_uart((uint8_t*)"Sensor inicializado por UART4...", huart2);
+		enviar_stringCompleto_uart((uint8_t*)"Sensor inicializado por UART4...\r\n", huart2);
 	}
 	return init_status_uart;
 }
