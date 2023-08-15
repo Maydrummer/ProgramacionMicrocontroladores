@@ -14,6 +14,7 @@
 #include "driver_keypad.h"
 #include "driver_sensor.h"
 #include "driver_terminal.h"
+#include "driver_sensor_presencia.h"
 
 
 #define TIEMPO_GUARDA           15   //Tiempo de espera de alarma para que el usuario pueda ingresar el pin para desactivar o para que pueda salir luego de activar

@@ -11,6 +11,7 @@ C_SRCS += \
 ../Drivers/API/Src/driver_keypad.c \
 ../Drivers/API/Src/driver_lcd.c \
 ../Drivers/API/Src/driver_sensor.c \
+../Drivers/API/Src/driver_sensor_presencia.c \
 ../Drivers/API/Src/driver_terminal.c \
 ../Drivers/API/Src/driver_uart.c 
 
@@ -21,6 +22,7 @@ OBJS += \
 ./Drivers/API/Src/driver_keypad.o \
 ./Drivers/API/Src/driver_lcd.o \
 ./Drivers/API/Src/driver_sensor.o \
+./Drivers/API/Src/driver_sensor_presencia.o \
 ./Drivers/API/Src/driver_terminal.o \
 ./Drivers/API/Src/driver_uart.o 
 
@@ -31,6 +33,7 @@ C_DEPS += \
 ./Drivers/API/Src/driver_keypad.d \
 ./Drivers/API/Src/driver_lcd.d \
 ./Drivers/API/Src/driver_sensor.d \
+./Drivers/API/Src/driver_sensor_presencia.d \
 ./Drivers/API/Src/driver_terminal.d \
 ./Drivers/API/Src/driver_uart.d 
 
@@ -42,7 +45,7 @@ Drivers/API/Src/%.o Drivers/API/Src/%.su Drivers/API/Src/%.cyclo: ../Drivers/API
 clean: clean-Drivers-2f-API-2f-Src
 
 clean-Drivers-2f-API-2f-Src:
-	-$(RM) ./Drivers/API/Src/API_delay.cyclo ./Drivers/API/Src/API_delay.d ./Drivers/API/Src/API_delay.o ./Drivers/API/Src/API_delay.su ./Drivers/API/Src/FSM_Alarma.cyclo ./Drivers/API/Src/FSM_Alarma.d ./Drivers/API/Src/FSM_Alarma.o ./Drivers/API/Src/FSM_Alarma.su ./Drivers/API/Src/driver_i2c1.cyclo ./Drivers/API/Src/driver_i2c1.d ./Drivers/API/Src/driver_i2c1.o ./Drivers/API/Src/driver_i2c1.su ./Drivers/API/Src/driver_keypad.cyclo ./Drivers/API/Src/driver_keypad.d ./Drivers/API/Src/driver_keypad.o ./Drivers/API/Src/driver_keypad.su ./Drivers/API/Src/driver_lcd.cyclo ./Drivers/API/Src/driver_lcd.d ./Drivers/API/Src/driver_lcd.o ./Drivers/API/Src/driver_lcd.su ./Drivers/API/Src/driver_sensor.cyclo ./Drivers/API/Src/driver_sensor.d ./Drivers/API/Src/driver_sensor.o ./Drivers/API/Src/driver_sensor.su ./Drivers/API/Src/driver_terminal.cyclo ./Drivers/API/Src/driver_terminal.d ./Drivers/API/Src/driver_terminal.o ./Drivers/API/Src/driver_terminal.su ./Drivers/API/Src/driver_uart.cyclo ./Drivers/API/Src/driver_uart.d ./Drivers/API/Src/driver_uart.o ./Drivers/API/Src/driver_uart.su
+	-$(RM) ./Drivers/API/Src/API_delay.cyclo ./Drivers/API/Src/API_delay.d ./Drivers/API/Src/API_delay.o ./Drivers/API/Src/API_delay.su ./Drivers/API/Src/FSM_Alarma.cyclo ./Drivers/API/Src/FSM_Alarma.d ./Drivers/API/Src/FSM_Alarma.o ./Drivers/API/Src/FSM_Alarma.su ./Drivers/API/Src/driver_i2c1.cyclo ./Drivers/API/Src/driver_i2c1.d ./Drivers/API/Src/driver_i2c1.o ./Drivers/API/Src/driver_i2c1.su ./Drivers/API/Src/driver_keypad.cyclo ./Drivers/API/Src/driver_keypad.d ./Drivers/API/Src/driver_keypad.o ./Drivers/API/Src/driver_keypad.su ./Drivers/API/Src/driver_lcd.cyclo ./Drivers/API/Src/driver_lcd.d ./Drivers/API/Src/driver_lcd.o ./Drivers/API/Src/driver_lcd.su ./Drivers/API/Src/driver_sensor.cyclo ./Drivers/API/Src/driver_sensor.d ./Drivers/API/Src/driver_sensor.o ./Drivers/API/Src/driver_sensor.su ./Drivers/API/Src/driver_sensor_presencia.cyclo ./Drivers/API/Src/driver_sensor_presencia.d ./Drivers/API/Src/driver_sensor_presencia.o ./Drivers/API/Src/driver_sensor_presencia.su ./Drivers/API/Src/driver_terminal.cyclo ./Drivers/API/Src/driver_terminal.d ./Drivers/API/Src/driver_terminal.o ./Drivers/API/Src/driver_terminal.su ./Drivers/API/Src/driver_uart.cyclo ./Drivers/API/Src/driver_uart.d ./Drivers/API/Src/driver_uart.o ./Drivers/API/Src/driver_uart.su
 
 .PHONY: clean-Drivers-2f-API-2f-Src
 

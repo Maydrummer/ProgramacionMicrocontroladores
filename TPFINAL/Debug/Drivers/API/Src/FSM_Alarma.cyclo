@@ -1,4 +1,4 @@
 ../Drivers/API/Src/FSM_Alarma.c:28:6:init_perifericos_app	3
-../Drivers/API/Src/FSM_Alarma.c:40:6:FSM_init	1
-../Drivers/API/Src/FSM_Alarma.c:45:6:FSM_update	13
-../Drivers/API/Src/FSM_Alarma.c:141:6:int_to_ascii	4
+../Drivers/API/Src/FSM_Alarma.c:41:6:FSM_init	1
+../Drivers/API/Src/FSM_Alarma.c:46:6:FSM_update	22
+../Drivers/API/Src/FSM_Alarma.c:208:6:int_to_ascii	4

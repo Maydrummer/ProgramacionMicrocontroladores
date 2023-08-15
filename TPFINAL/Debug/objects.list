@@ -11,6 +11,7 @@
 "./Drivers/API/Src/driver_keypad.o"
 "./Drivers/API/Src/driver_lcd.o"
 "./Drivers/API/Src/driver_sensor.o"
+"./Drivers/API/Src/driver_sensor_presencia.o"
 "./Drivers/API/Src/driver_terminal.o"
 "./Drivers/API/Src/driver_uart.o"
 "./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"

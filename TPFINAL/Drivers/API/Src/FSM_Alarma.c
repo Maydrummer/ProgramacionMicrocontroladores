@@ -28,6 +28,7 @@ uint8_t ascii_format[length_tiempo];//Variable para imprimir segundos transcurri
 void init_perifericos_app(void)
 {
 	keypad_init();
+	sensor_init();
 	HAL_Delay(100);
 	while(!(init_terminal()));
 	HAL_Delay(100);
@@ -122,11 +123,77 @@ void FSM_update(void)
 		CLEAR_LCD();
 		LCD_XY(LCD_LINEA1,POS_0);
 		STRING_LCD((uint8_t *)"Alarma ON");
-
-
-
+		if(detectar_presencia())
+		{
+			enviar_msg_terminal((uint8_t *)"Se ha detectado una persona...\r\n");
+			CLEAR_LCD();
+			LCD_XY(LCD_LINEA1,POS_0);
+			STRING_LCD((uint8_t *)"PRESENCIA: ON");
+			estado_actual=DESARMANDO;
+		}
+		else
+		{
+			CLEAR_LCD();
+			LCD_XY(LCD_LINEA1,POS_0);
+			STRING_LCD((uint8_t *)"PRESENCIA: OFF");
+		}
+		start_time = HAL_GetTick();//Actualizacion de tiempo
+		while (HAL_GetTick() - start_time < one_second){};
 		break;
+
 	case DESARMANDO:
+		start_time= HAL_GetTick();
+		while (HAL_GetTick() - start_time < one_second)
+		{
+			enviar_msg_terminal((uint8_t *)"ALARMA ARMADA...\r\n");
+		}
+		CLEAR_LCD();
+		LCD_XY(LCD_LINEA1,POS_1);
+		STRING_LCD((uint8_t *)"Identifiquese: ");
+		contador=0;
+		uint8_t clave_desbloqueo[PIN_SIZE + 1]="";
+		uint8_t *ptro_desbloqueo=clave_desbloqueo;
+		uint8_t tecla_desbloqueo;
+		LCD_XY(LCD_LINEA2,POS_4);
+		while(contador < PIN_SIZE)
+		{
+			tecla_desbloqueo=keypad_read();
+
+			if(tecla_desbloqueo != '\0')
+			{
+				*ptro_desbloqueo = tecla_desbloqueo;
+				contador++;
+				ptro_desbloqueo++;
+				STRING_LCD((uint8_t *)"*");
+
+			}
+		}
+		*ptro_desbloqueo= '\0';
+		enviar_msg_terminal((uint8_t *)"Clave Ingresada: ");
+		enviar_msg_terminal((uint8_t *)clave_desbloqueo);
+		enviar_msg_terminal((uint8_t *)"\r\n");
+		if (strcmp((const char *)clave_desbloqueo,(const char *) clave) == 0)
+		{
+			enviar_msg_terminal((uint8_t *)"Clave correcta \r\n");
+			CLEAR_LCD();
+			LCD_XY(LCD_LINEA1,POS_1);
+			STRING_LCD((uint8_t *)"Alarma OFF");
+			uint32_t start_time = HAL_GetTick();//Actualizacion de tiempo
+			while (HAL_GetTick() - start_time < TIEMPO_TRANSITION) {}; //No bloqueante
+			estado_actual=DESARMADO_OK;
+
+		}
+		else
+		{
+			enviar_msg_terminal((uint8_t *)"Clave Incorrecta \r\n");
+			CLEAR_LCD();
+			LCD_XY(LCD_LINEA1,POS_0);
+			STRING_LCD((uint8_t *)"INTRUSO");
+			uint32_t start_time = HAL_GetTick();//Actualizacion de tiempo
+			while (HAL_GetTick() - start_time < TIEMPO_TRANSITION) {}; //No bloqueante
+			estado_actual=INTRUSO;
+		}
+
 
 		break;
 	case INTRUSO:
