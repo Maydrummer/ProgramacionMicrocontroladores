@@ -1,2 +1,4 @@
 ../Drivers/API/Src/driver_sensor_presencia.c:11:6:sensor_init	1
 ../Drivers/API/Src/driver_sensor_presencia.c:24:8:detectar_presencia	2
+../Drivers/API/Src/driver_sensor_presencia.c:34:6:alarma_init_gpio	1
+../Drivers/API/Src/driver_sensor_presencia.c:46:6:alarma_on	1

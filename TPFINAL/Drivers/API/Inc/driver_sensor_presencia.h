@@ -15,6 +15,7 @@
 
 void sensor_init(void);
 bool_t detectar_presencia(void);
-
+void alarma_init_gpio(void);
+void alarma_on(void);
 
 #endif /* API_INC_DRIVER_SENSOR_PRESENCIA_H_ */

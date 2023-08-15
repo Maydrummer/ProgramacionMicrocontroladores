@@ -29,6 +29,7 @@ void init_perifericos_app(void)
 {
 	keypad_init();
 	sensor_init();
+	alarma_init_gpio();
 	HAL_Delay(100);
 	while(!(init_terminal()));
 	HAL_Delay(100);
@@ -145,7 +146,7 @@ void FSM_update(void)
 		start_time= HAL_GetTick();
 		while (HAL_GetTick() - start_time < one_second)
 		{
-			enviar_msg_terminal((uint8_t *)"ALARMA ARMADA...\r\n");
+			enviar_msg_terminal((uint8_t *)"Posible Intruso...\r\n");
 		}
 		CLEAR_LCD();
 		LCD_XY(LCD_LINEA1,POS_1);
@@ -155,7 +156,8 @@ void FSM_update(void)
 		uint8_t *ptro_desbloqueo=clave_desbloqueo;
 		uint8_t tecla_desbloqueo;
 		LCD_XY(LCD_LINEA2,POS_4);
-		while(contador < PIN_SIZE)
+		start_time= HAL_GetTick();
+		while(contador < PIN_SIZE && (HAL_GetTick() - start_time < TIEMPO_IDENTIFICACION) )
 		{
 			tecla_desbloqueo=keypad_read();
 
@@ -172,6 +174,8 @@ void FSM_update(void)
 		enviar_msg_terminal((uint8_t *)"Clave Ingresada: ");
 		enviar_msg_terminal((uint8_t *)clave_desbloqueo);
 		enviar_msg_terminal((uint8_t *)"\r\n");
+
+
 		if (strcmp((const char *)clave_desbloqueo,(const char *) clave) == 0)
 		{
 			enviar_msg_terminal((uint8_t *)"Clave correcta \r\n");
@@ -187,8 +191,8 @@ void FSM_update(void)
 		{
 			enviar_msg_terminal((uint8_t *)"Clave Incorrecta \r\n");
 			CLEAR_LCD();
-			LCD_XY(LCD_LINEA1,POS_0);
-			STRING_LCD((uint8_t *)"INTRUSO");
+			LCD_XY(LCD_LINEA1,POS_2);
+			STRING_LCD((uint8_t *)"INTRUSO!!!");
 			uint32_t start_time = HAL_GetTick();//Actualizacion de tiempo
 			while (HAL_GetTick() - start_time < TIEMPO_TRANSITION) {}; //No bloqueante
 			estado_actual=INTRUSO;
@@ -197,6 +201,12 @@ void FSM_update(void)
 
 		break;
 	case INTRUSO:
+		alarma_on();
+		enviar_msg_terminal((uint8_t *)"Estado Actual: Intruso...\r\n");
+		start_time = HAL_GetTick();//Actualizacion de tiempo
+		while (HAL_GetTick() - start_time < TIEMPO_TOGGLE){};
+
+
 
 		break;
 	default:
