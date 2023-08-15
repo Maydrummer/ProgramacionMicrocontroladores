@@ -12,8 +12,6 @@
 static uint8_t clave[PIN_SIZE + 1]="5656"; //Para asegurar el final de caracter
 uint8_t teclado=0;
 uint8_t contador=0;
-delay_t delay_guarda;
-delay_t delay_transition;
 typedef enum
 {
 	DESARMADO_OK,
@@ -23,16 +21,20 @@ typedef enum
 	INTRUSO,
 }fsm_state_t;
 
-delay_t tiempo_guarda_alarma; //Creacion de la estructura del retardo no bloqueante para el tiempo de guarda
 static fsm_state_t estado_actual; //Variable que llevara el estado actual de la FSM
+uint8_t ascii_format[length_tiempo];//Variable para imprimir segundos transcurridos
 
 //Inicia perifericos necesarios para la aplicacion
 void init_perifericos_app(void)
 {
 	keypad_init();
+	HAL_Delay(100);
 	while(!(init_terminal()));
+	HAL_Delay(100);
 	while(!(init_sensor()));
+	HAL_Delay(100);
 	INIT_LCD();
+	HAL_Delay(100);
 }
 
 void FSM_init(void)
@@ -77,40 +79,50 @@ void FSM_update(void)
 			CLEAR_LCD();
 			LCD_XY(LCD_LINEA1,POS_1);
 			STRING_LCD((uint8_t *)"Clave correcta");
-			HAL_Delay(4000);
+			uint32_t start_time = HAL_GetTick();//Actualizacion de tiempo
+			while (HAL_GetTick() - start_time < TIEMPO_TRANSITION) {}; //No bloqueante
 			estado_actual=ARMANDO;
+
 		}
 		else
 		{
+			enviar_msg_terminal((uint8_t *)"Clave Incorrecta \r\n");
 			CLEAR_LCD();
 			LCD_XY(LCD_LINEA1,POS_0);
 			STRING_LCD((uint8_t *)"Clave incorrecta");
-			enviar_msg_terminal((uint8_t *)"Clave Incorrecta \r\n");
-			HAL_Delay(4000);
+			uint32_t start_time = HAL_GetTick();//Actualizacion de tiempo
+			while (HAL_GetTick() - start_time < TIEMPO_TRANSITION) {}; //No bloqueante
 			estado_actual=DESARMADO_OK;
 		}
 		break;
 	case ARMANDO:
 		enviar_msg_terminal((uint8_t *)"ARMANDO ALARMA...\r\n");
 		CLEAR_LCD();
-		LCD_XY(LCD_LINEA1,POS_0);
-		STRING_LCD((uint8_t *)"Tiempo de armado: ");
-		LCD_XY(LCD_LINEA2,POS_5);
-		STRING_LCD((uint8_t *)"15 sec.");
-		HAL_Delay(TIEMPO_GUARDA);
+		for(uint8_t i=0 ; i < TIEMPO_GUARDA; i++)
+		{
+			uint8_t tiempo_temp=TIEMPO_GUARDA-i; //Actualizacion de la variable i que lleva el numero de iteracion
+			int_to_ascii(tiempo_temp,ascii_format);// Conversion a formato ascii
+			uint32_t start_time = HAL_GetTick();//Actualizacion de tiempo
+			while (HAL_GetTick() - start_time < one_second) {
+				LCD_XY(LCD_LINEA1,POS_0);
+				STRING_LCD((uint8_t *)"Tiempo de armado: ");
+				LCD_XY(LCD_LINEA2,POS_5);
+				STRING_LCD((uint8_t *)ascii_format);
+			};
+		}
 		estado_actual=ARMADO_OK;
-		enviar_msg_terminal((uint8_t *)"ALARMA ARMADA...\r\n");
-		HAL_Delay(TIEMPO_TRANSITION);
-
-
-
+		uint32_t start_time = HAL_GetTick();//Actualizacion de tiempo
+		while (HAL_GetTick() - start_time < TIEMPO_TRANSITION)
+		{
+			enviar_msg_terminal((uint8_t *)"ALARMA ARMADA...\r\n");
+		}
 		break;
 	case ARMADO_OK:
+		enviar_msg_terminal((uint8_t *)"ESTADO ACTUAL: ARMADO_OK \r\n");
 		CLEAR_LCD();
 		LCD_XY(LCD_LINEA1,POS_0);
-		STRING_LCD((uint8_t *)"Distancia sensor: ");
-		enviar_msg_terminal((uint8_t *)"ESTADO ACTUAL: ARMADO_OK \r\n");
-		HAL_Delay(500);//Esto no es fijo, solo para pruebas
+		STRING_LCD((uint8_t *)"Alarma ON");
+
 
 
 		break;
@@ -126,3 +138,23 @@ void FSM_update(void)
 	}
 }
 
+void int_to_ascii(uint8_t valor,uint8_t *cadena_ascii)
+{
+	if (valor >= 0 && valor <= 9)
+	{
+		cadena_ascii[0] = cero_ascii;
+		cadena_ascii[1] = cero_ascii + valor; // Carácter de final de cadena
+	} else if (valor >= decena && valor <= 15)
+	{
+		cadena_ascii[0] = '1';
+	    cadena_ascii[1] = cero_ascii + (valor - decena);
+	}
+	cadena_ascii[2]= ' ';
+	cadena_ascii[3]= 'S';
+	cadena_ascii[4]= 'e';
+	cadena_ascii[5]= 'c';
+	cadena_ascii[6]= '.';
+	cadena_ascii[7]= caracter_final;
+
+
+}

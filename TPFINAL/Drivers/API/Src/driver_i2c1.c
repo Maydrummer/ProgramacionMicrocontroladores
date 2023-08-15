@@ -14,7 +14,7 @@ void gpio_i2c_config(void)
 	__HAL_RCC_GPIOB_CLK_ENABLE();
 	i2c_gpio.Pin=GPIO_PIN_8|GPIO_PIN_9;
 	i2c_gpio.Mode=GPIO_MODE_AF_OD; //Funcion alterna y lo dejamos en OPEN DRAIN,ya que I2C se maneja asi
-	i2c_gpio.Pull=GPIO_PULLUP;//Para poner en pull UP sd y scl
+	i2c_gpio.Pull=GPIO_NOPULL;//Para poner en pull UP sd y scl usaremos resistencias externas
 	i2c_gpio.Speed=GPIO_SPEED_FREQ_VERY_HIGH;//Debe ser alta la frecuencia debido a que seran pines de comunicacion
 	i2c_gpio.Alternate=GPIO_AF4_I2C1;
 	HAL_GPIO_Init(GPIOB, &i2c_gpio);
