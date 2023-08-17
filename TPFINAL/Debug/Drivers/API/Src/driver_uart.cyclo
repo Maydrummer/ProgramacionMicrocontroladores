@@ -1,5 +1,5 @@
-../Drivers/API/Src/driver_uart.c:11:6:enviar_stringCompleto_uart	2
-../Drivers/API/Src/driver_uart.c:23:6:enviar_stringcortado_uart	1
-../Drivers/API/Src/driver_uart.c:30:6:recibir_uart	1
-../Drivers/API/Src/driver_uart.c:36:6:clean_rx_buffer	1
-../Drivers/API/Src/driver_uart.c:41:6:clean_tx_buffer	1
+../Drivers/API/Src/driver_uart.c:19:6:enviar_stringCompleto_uart	2
+../Drivers/API/Src/driver_uart.c:38:6:enviar_stringcortado_uart	1
+../Drivers/API/Src/driver_uart.c:55:6:recibir_uart	1
+../Drivers/API/Src/driver_uart.c:67:6:clean_rx_buffer	1
+../Drivers/API/Src/driver_uart.c:78:6:clean_tx_buffer	1

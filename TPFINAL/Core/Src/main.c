@@ -76,8 +76,8 @@ int main(void)
 
   /* Configure the system clock */
   SystemClock_Config();
-  init_perifericos_app();
-  FSM_init();
+  init_perifericos_app(); //Inicializa todos los perifericos a utilizar
+  FSM_init(); //Empieza la FMS en el estado inicial
   /* USER CODE BEGIN SysInit */
 
   /* USER CODE END SysInit */
@@ -92,17 +92,10 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  FSM_update();
-	  /*
-	  uint8_t caracter=keypad_read();
-	  uint8_t *ptr=&caracter;
-	  HAL_UART_Transmit(&huart2, ptr, 1, 100);*/
-
-
-
-
+	  FSM_update(); //Actualiza la maquina de estado
 
     /* USER CODE BEGIN 3 */
+
 
   }
   /* USER CODE END 3 */

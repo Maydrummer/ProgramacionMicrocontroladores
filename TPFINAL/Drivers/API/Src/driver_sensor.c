@@ -11,7 +11,7 @@
 #include "driver_sensor.h"
 
 UART_HandleTypeDef huart4;// Se crea estructura para el uart4 donde estara conectado el sensor
-extern UART_HandleTypeDef huart2;
+extern UART_HandleTypeDef huart2; //Para utilizar la terminar y enviar mensajes de configuracion
 
 
 //Variables privadas
@@ -20,6 +20,14 @@ static uint8_t frame_header[frame_header_length]={0x55,0xA5,0x0A,0xD3}; //Trama 
 static uint8_t rx_buffer[frame_length];
 static uint8_t asciiformat[length_cm_ascii];
 
+
+/**
+  * @brief Funcion que inicia el uart 4 para comunicarse con el sensor tipo radar
+  * @note  el formato es 115200@8N1
+  * @note  usa la libreria driver_uart.c y envia por el uart2 mensaje de confirmacion de inicio
+  * @param ninguno
+  * @retval bool_t retorna un boleano, true si se configuro correctamente, caso contrario, false
+  */
 bool_t init_sensor(void)
 {
 	init_status_uart=false;
@@ -39,9 +47,14 @@ bool_t init_sensor(void)
 	return init_status_uart;
 }
 
-//Esta funcion se debe llamar para llenar el buffer de recepcion, aqui ya se valida la trama y se extrae distancia
-//y se la guarda en formato ascii en un buffer asciiformat
 
+/**
+  * @brief Funcion para llenar el buffer de recepcion destinado a distancia del sensor
+  * @note  Aqui ya se valida la trama y se extrae distancia
+  * @note  Se guarda la distancia en formato ascii en un buffer asciiformat, se usa driver_uart.c
+  * @param ninguno
+  * @retval ninguno
+  */
 void  get_frame(void)
 {
 	bool_t trama_ok;
@@ -65,6 +78,12 @@ void  get_frame(void)
 	}
 }
 
+/**
+  * @brief Funcion convierte la distancia en formato ascii
+  * @note  Se extrae solo la distancia de la trama recibida
+  * @param ninguno
+  * @retval ninguno
+  */
 void get_distance(void)
 {
 	uint8_t distance;
@@ -77,6 +96,13 @@ void get_distance(void)
 	asciiformat[3]= caracter_nulo;  // caracter nulo
 }
 
+
+/**
+  * @brief Funcion envia "EEE" en caso de que el encabezado de la trama no sea el correcto
+  * @note
+  * @param ninguno
+  * @retval ninguno
+  */
 void get_distance_error(void)
 {
 	uint8_t *ptraux=asciiformat;//Puntero al buffer donde se encuentra formateada la distancia
@@ -87,6 +113,12 @@ void get_distance_error(void)
 	}
 }
 
+/**
+  * @brief Funcion que retorna la direccion de memoria de la cadena asciiformat
+  * @note  Esta cadena contiene la distancia en ascii
+  * @param ninguno
+  * @retval ninguno
+  */
 uint8_t* return_distance(void)
 {
 	return asciiformat;

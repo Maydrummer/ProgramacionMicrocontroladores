@@ -8,6 +8,15 @@
 
 I2C_HandleTypeDef hi2c1_t;
 extern UART_HandleTypeDef huart2;
+
+
+/**
+  * @brief Funcion que configura los GPIOs que se utilizaran para comunicacion I2C
+  * @note  Se activa funcion alterna de los GPIOs
+  * @note  Se los configura a alta velocidad los GPIOs, se utiliza la HAL para el i2c
+  * @param ninguno
+  * @retval Ninguno
+  */
 void gpio_i2c_config(void)
 {
 	GPIO_InitTypeDef i2c_gpio={0};
@@ -20,6 +29,13 @@ void gpio_i2c_config(void)
 	HAL_GPIO_Init(GPIOB, &i2c_gpio);
 
 }
+
+/**
+  * @brief Funcion que configura la estructura de comunicacion I2C
+  * @note  Segun el modulo I2C para el LCD, el direccionamiento es de 7 bits.
+  * @param ninguno
+  * @retval Ninguno
+  */
 bool_t i2c_init(void)
 {
 	bool_t state_i2c_init=false;
@@ -43,6 +59,12 @@ bool_t i2c_init(void)
 	return state_i2c_init;
 }
 
+
+/**
+  * @brief Funcion que escanea la direccion de los dispositivos I2C que se encuentren en linea
+  * @param ninguno
+  * @retval Ninguno
+  */
 void scan_address(void)
 {
 	  char txt2[scan_address_length];
@@ -57,6 +79,13 @@ void scan_address(void)
 	  }
 }
 
+/**
+  * @brief Funcion que transmite por I2C usando la HAL
+  * @param hi2c Estructura del I2C
+  * @param address Direccion del esclavo al que se quiera transmitir
+  * @param *pstring puntero al buffer de transmision
+  * @retval Ninguno
+  */
 void transmit_i2c(I2C_HandleTypeDef hi2c,uint16_t address,uint8_t *pstring)
 {
 	while(*pstring)

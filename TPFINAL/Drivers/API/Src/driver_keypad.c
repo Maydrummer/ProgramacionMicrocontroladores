@@ -6,7 +6,8 @@
  */
 
 #include "driver_keypad.h"
-#define scan_time 50
+#define scan_time 50   //Tiempo de scaneo de las teclas
+
 static uint8_t letras[n_filas][n_columnas]={{'1','2','3','A'},
 						                    {'4','5','6','B'},
 						                    {'7','8','9','C'},
@@ -26,7 +27,15 @@ void F1_OFF(void);
 void F2_OFF(void);
 void F3_OFF(void);
 void F4_OFF(void);
-//Funcion que inicia los GPIOs que se utilizaran para el manejo del teclado
+
+
+/**
+  * @brief Funcion que inicia los GPIOs que se utilizaran para el manejo del teclado
+  * @note  Se configura 4 GPIOS como entrada y 4 como salida
+  * @note  Se activa el clock para los buses, ademas inicia todos los GPIOS  apagado
+  * @param ninguno
+  * @retval ninguno
+  */
 void keypad_init(void)
 {
 	GPIO_InitTypeDef GPIO_InitStruct = {0}; //Creacion de variable tipo estructura para configurar los Gpio's
@@ -53,7 +62,16 @@ void keypad_init(void)
 	F3_OFF();
 	F4_OFF();
 }
-//Funcion que retorna el caracter que se presiona en uint8_t
+
+
+/**
+  * @brief Funcion que retorna el caracter que se presiona en uint8_t
+  * @note  Se crea una secuencia de barridos donde solo se deja en estado bajo una fila cada 50 ms
+  * @note  si es que el usuario presiona una de las columnas y si es de la fila que se esta escaneando
+  * @note  se retorna un caracter con la posicion exacta de la fila y la columna que se presiono
+  * @param ninguno
+  * @retval uint8_t Este sera el caracter retornado
+  */
 uint8_t keypad_read(void)
 {
 	uint8_t i=0;
@@ -62,10 +80,10 @@ uint8_t keypad_read(void)
 	{
 		if(i==0)//Barrido en fila 1
 		{
-			F1_OFF();
-			F2_ON();
-			F3_ON();
-			F4_ON();
+			F1_OFF(); //Apaga el GPIO de la fila 1
+			F2_ON();  //Mantiene encendido el GPIO de la fila 2
+			F3_ON();  //Mantiene encendido el GPIO de la fila 3
+			F4_ON();  //Mantiene encendido el GPIO de la fila 4
 			HAL_Delay(scan_time);
 
 			while ( !Read_COL1() ){caracter=letras[0][COL1];}	//caracter 1
@@ -117,26 +135,47 @@ uint8_t keypad_read(void)
 
 }
 
-
-//Desarrollo funciones de lectura
-
+/**
+  * @brief Funcion que detecta el estado del teclado
+  * @param ninguno
+  * @retval uint8_t Si es presionado envia un 1, caso contrario 0
+  */
 static uint8_t Read_COL1(void) {
     return (HAL_GPIO_ReadPin(PORT_C, C1_Pin)) ? 1 : 0;
 }
 
+/**
+  * @brief Funcion que detecta el estado del teclado
+  * @param ninguno
+  * @retval uint8_t Si es presionado envia un 1, caso contrario 0
+  */
 static uint8_t Read_COL2(void) {
     return (HAL_GPIO_ReadPin(PORT_C, C2_Pin)) ? 1 : 0;
 }
 
+/**
+  * @brief Funcion que detecta el estado del teclado
+  * @param ninguno
+  * @retval uint8_t Si es presionado envia un 1, caso contrario 0
+  */
 static uint8_t Read_COL3(void) {
     return (HAL_GPIO_ReadPin(PORT_C, C3_Pin)) ? 1 : 0;
 }
 
+/**
+  * @brief Funcion que detecta el estado del teclado
+  * @param ninguno
+  * @retval uint8_t Si es presionado envia un 1, caso contrario 0
+  */
 static uint8_t Read_COL4(void) {
     return (HAL_GPIO_ReadPin(PORT_C, C4_Pin)) ? 1 : 0;
 }
 
-//Desarrollo funciones para apagar o encender una fila o columna
+/**
+  * @brief Funcion que activa y desactiva los GPIOS
+  * @param ninguno
+  * @retval ninguno
+  */
 void F1_OFF(void){
 	HAL_GPIO_WritePin(PORT_F,F1_Pin , GPIO_PIN_RESET);
 }

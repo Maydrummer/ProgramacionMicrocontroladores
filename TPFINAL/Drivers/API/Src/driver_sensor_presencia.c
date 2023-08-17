@@ -5,9 +5,16 @@
  *      Author: thony
  */
 
-//Funcion que activa el gpio PA10 para lecturar la presencia
+
 #include "driver_sensor_presencia.h"
 
+
+/**
+  * @brief Funcion que inicializa el GPIO del sensor radar
+  * @note
+  * @param ninguno
+  * @retval ninguno
+  */
 void sensor_init(void)
 {
 	GPIO_InitTypeDef gpio_sensor={0};
@@ -20,7 +27,12 @@ void sensor_init(void)
 }
 
 
-//Basicamente devuelve un true cuando se detecta presencia
+/**
+  * @brief Funcion que retorna un booleano true cuando se detecte movimiento
+  * @note
+  * @param ninguno
+  * @retval bool_t Si es true significa que existio un movimiento
+  */
 bool_t detectar_presencia(void)
 {
 	bool_t temp=false;
@@ -31,6 +43,13 @@ bool_t detectar_presencia(void)
 	return temp;
 }
 
+
+/**
+  * @brief Funcion que inicia el GPIO del LED de alarma
+  * @note
+  * @param ninguno
+  * @retval ninguno
+  */
 void alarma_init_gpio(void)
 {
 	GPIO_InitTypeDef GPIO_Alarma = {0};
@@ -43,6 +62,13 @@ void alarma_init_gpio(void)
 	HAL_GPIO_Init(GPIOB, &GPIO_Alarma);
 
 }
+
+/**
+  * @brief Funcion que cambia el estado del GPIOB PIN 3, donde esta mapeado el Led
+  * @note
+  * @param ninguno
+  * @retval ninguno
+  */
 void alarma_on(void)
 {
 	HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_3);

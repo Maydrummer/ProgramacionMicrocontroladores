@@ -18,7 +18,7 @@
 
 
 #define TIEMPO_GUARDA              15   //Tiempo de espera de alarma para que el usuario pueda ingresar el pin para desactivar o para que pueda salir luego de activar
-#define TIEMPO_TRANSITION        4000   //Tiempo entre transicion
+#define TIEMPO_TRANSITION        2000   //Tiempo entre transicion
 #define one_second               1000
 #define PIN_SIZE                    4
 #define length_tiempo	            7
@@ -28,11 +28,12 @@
 #define caracter_final           '\0'
 #define TIEMPO_IDENTIFICACION   15000
 #define TIEMPO_TOGGLE             500
+#define tiempo_alarma			15000
+
 void FSM_init(void);
 void FSM_update(void);
 void init_perifericos_app(void);
 void int_to_ascii(uint8_t valor,uint8_t *cadena_ascii);
-
 
 
 #endif /* API_INC_FSM_ALARMA_H_ */

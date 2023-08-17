@@ -1,2 +1,2 @@
-../Drivers/API/Src/driver_terminal.c:11:8:init_terminal	2
-../Drivers/API/Src/driver_terminal.c:30:6:enviar_msg_terminal	1
+../Drivers/API/Src/driver_terminal.c:19:8:init_terminal	2
+../Drivers/API/Src/driver_terminal.c:45:6:enviar_msg_terminal	1

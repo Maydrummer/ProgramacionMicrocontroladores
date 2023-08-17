@@ -8,6 +8,14 @@
 
 UART_HandleTypeDef huart2;
 
+
+/**
+  * @brief Funcion que inicia el uart 2 para comunicarse con la terminal de la PC
+  * @note  el formato es 115200@8N1
+  * @note  usa la libreria driver_uart.c
+  * @param ninguno
+  * @retval bool_t retorna un boleano, true si se configuro correctamente, caso contrario, false
+  */
 bool_t init_terminal(void)
 {
 	bool_t state_uart=false;
@@ -27,6 +35,13 @@ bool_t init_terminal(void)
 	return state_uart;
 }
 
+
+/**
+  * @brief Funcion que envia un mensaje por el terminal
+  * @note  usa la libreria driver_uart.c
+  * @param *msg recibe un puntero del mensaje que ingresemos
+  * @retval ninguno
+  */
 void enviar_msg_terminal(uint8_t *msg)
 {
 	enviar_stringCompleto_uart(msg, huart2);
